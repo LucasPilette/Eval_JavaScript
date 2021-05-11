@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Entête -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Lien Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>Jarditou-BT</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-none d-lg-block">
+        <div class="row">
+          <div class="col-12 col-lg-2">
+            <img src="src/img/jarditou_logo.jpg" class="img-fluid" />
+          </div>
+          <div class="col-lg-6"></div>
+          <div class="col-12 col-lg-4">
+            <h2>Tout le jardin</h2>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <p class="my-auto pr-4"><b>Jarditou.com</b></p>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Index BT.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Tableau BT.html">Tableau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact BT.html">Formulaire</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-lg-block" style="display: inline">
+          <input
+            type="text"
+            class="mr-2 rounded"
+            placeholder="Votre promotion"
+          />
+          <button type="button" class="btn btn-outline-success">
+            Rechercher
+          </button>
+        </div>
+      </nav>
+      <img src="src/img/promotion.jpg" class="img-fluid" />
+      <div class="row">
+        <div class="col-12">
+          <form id="form1">
+            <p>*Ces zones sont obligatoires</p>
+            <fieldset>
+              <legend>Vos coordonnées</legend>
+              <label for="nom">Votre nom* :</label>
+              <input class="form-control" type="text" name="nom" id="nom" />
+              <span id="erreurNom" style="color: red; font-weight: bold"></span>
+              <br />
+              <label for="prénom">Votre prénom* :</label>
+              <input
+                id="prenom"
+                class="form-control"
+                type="text"
+                name="prénom"
+              />
+              <span
+                id="erreurPrenom"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+              <label for="sexe">Sexe :</label>
+              <input id="feminin" type="radio" name="sexe" value="Féminin" />
+              Féminin
+              <input id="masculin" type="radio" name="sexe" value="Masculin" />
+              Masculin
+              <input id="neutre" type="radio" name="sexe" value="neutre" />
+              Neutre
+              <span
+                id="erreurSexe"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+              <label for="date">Date de naissance:</label>
+              <input class="form-control" type="date" name="ddn" id="date" />
+              <span
+                id="erreurDate"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+              <label for="code postal">Code postal*:</label>
+              <input
+                id="codePostal"
+                class="form-control"
+                type="text"
+                name="code postal"
+              />
+              <span
+                id="erreurCodePostal"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+              <label for="adresse">Adresse*:</label>
+              <input
+                id="adresse"
+                class="form-control"
+                type="text"
+                name="adresse"
+              />
+              <span
+                id="erreurAdresse"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+              <label for="email">Email*:</label>
+              <input
+                id="email"
+                class="form-control"
+                type="text"
+                name="email"
+                placeholder="dave.loper@afpa.fr"
+              />
+              <span
+                id="erreurEmail"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+            </fieldset>
+            <fieldset>
+              <legend>Votre demande</legend>
+              <label for="sujet">Sujet*:</label>
+              <select class="form-control" id="sujet">
+                <option id="choixUn" value="veuillez sélectionner un sujet">
+                  Veuillez sélectionner un sujet
+                </option>
+                <option value="mes commandes">Mes commandes</option>
+                <option value="question sur un produit">
+                  Question sur un produit
+                </option>
+                <option value="reclamation">Reclamation</option>
+                <option value="autres">Autres</option>
+              </select>
+              <span
+                id="erreurSujet"
+                style="color: red; font-weight: bold"
+              ></span>
+              <br />
+              <label for="votre question">Votre question*:</label>
+              <textarea id="question" class="form-control"></textarea>
+              <span
+                id="erreurQuestion"
+                style="color: red; font-weight: bold"
+              ></span>
+            </fieldset>
+            <br />
+            <input id="accord" type="checkbox" name="Accord" value="accord" />
+            * J'accepte le traitement informatique de ce formulaire
+            <span
+              id="erreurAccord"
+              style="color: red; font-weight: bold"
+            ></span>
+            <br />
+            <br />
+            <button class="btn btn-dark" type="submit">Envoyer</button>
+            <button class="btn btn-dark" type="reset">Annuler</button>
+          </form>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark rounded my-3">
+        <div class="collapse navbar-collapse" id="menu2">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="">Mentions légales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Horaires</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Plan du site</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Javascript.js"></script>
+  </body>
+</html>
